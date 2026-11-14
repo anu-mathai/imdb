@@ -1,0 +1,111 @@
+#api call for listing
+###
+GET http://127.0.0.1:8000/movies/
+Accept: application/json
+Authorization: Basic admin:admin@123
+
+#api call for adding
+###
+POST  http://127.0.0.1:8000/movies/
+Content-Type: application/json
+
+{
+    "title":"premam",
+    "year":2015,
+    "director":"Alphonse",
+    "language":"Malayalam",
+    "genre":"Romance"
+}
+
+#api call for retrieving
+###
+GET http://127.0.0.1:8000/movies/1/
+Accept: application/json
+Authorization: Basic admin:admin@123
+
+#api call for updating
+###
+PUT http://127.0.0.1:8000/movies/2/
+Content-Type: application/json
+
+{
+    "title":"premam",
+    "year":2017,
+    "director":"Alphonse",
+    "language":"Malayalam",
+    "genre":"Romance"
+}
+
+#api call for deleting
+###
+DELETE http://127.0.0.1:8000/movies/2/
+Accept: application/json
+
+#api call for creating admin user
+###
+POST http://127.0.0.1:8000/owner/register/
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "email":"admin@gmail.com",
+    "password":"admin@123"
+}
+
+#api call for adding a song
+###
+POST http://127.0.0.1:8000/m/1/song/
+Content-Type: application/json
+Authorization: Basic admin:admin@123
+
+{
+    "title":"Nizhal",
+    "singer":"Anwar Sadath",
+    "track_no":1,
+    "duration":"03:45"
+}
+
+#api call for creating user
+###
+POST http://127.0.0.1:8000/user/register/
+Content-Type: application/json
+
+{
+    "username":"hari",
+    "email":"hari@gmail.com",
+    "password":"hari@123"
+}
+
+#api call for adding review
+###
+POST http://127.0.0.1:8000/movie/1/review/
+Content-Type: application/json
+Authorization: Basic hari:hari@123
+
+{
+    "message":"good movie",
+    "rating":"9.7"
+}
+
+#api call for retrieving a review
+###
+GET http://127.0.0.1:8000/review/2/
+Accept: application/json
+Authorization: Basic hari:hari@123
+
+#api call for updating a review
+###
+PUT  http://127.0.0.1:8000/review/2/
+Content-Type: application/json
+Authorization: Basic hari:hari@123
+
+{
+    "message":"good",
+    "rating":"9.8"
+}
+
+#api call for deleteing a review
+###
+DELETE  http://127.0.0.1:8000/review/1/
+Accept: application/json
+Authorization: Basic anu:anu@123
